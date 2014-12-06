@@ -6,7 +6,7 @@ package gr.spinellis.school;
  * @assoc 1..* - 1..* Course
  * @assoc 0..* - "0..1 chairperson" Instructor
  */
-class Department {
+public class Department {
     Name name;
     void addInstructor() {}
     void removeInstructor() {}

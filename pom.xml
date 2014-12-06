@@ -53,6 +53,14 @@
               <name>opt</name>
               <placement>X</placement>
             </tag>
+            <tag>
+              <name>assoc</name>
+              <placement>X</placement>
+            </tag>
+            <tag>
+              <name>has</name>
+              <placement>X</placement>
+            </tag>
           </tags>
           <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
           <docletPath>${basedir}/doclets/UmlGraph.jar</docletPath>
@@ -67,7 +75,7 @@
           <additionalparam>-nodefontpackagesize 7</additionalparam>
           <additionalparam>-link http://docs.oracle.com/javase/8/docs/jdk/api/javadoc/doclet/</additionalparam>
           <additionalparam>-link http://download.oracle.com/javase/8/docs/api/</additionalparam>
-          <useStandardDocletOptions>true</useStandardDocletOptions>          
+          <useStandardDocletOptions>true</useStandardDocletOptions>
         </configuration>
       </plugin>
     </plugins>

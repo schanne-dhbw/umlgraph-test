@@ -1,10 +1,9 @@
 package gr.spinellis.school;
 
-
 /**
  * @assoc * Attends * Course
  */
-class Student {
+public class Student {
     Name name;
     Number studentID;
 }
