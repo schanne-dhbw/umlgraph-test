@@ -41,7 +41,7 @@
 	</target>
 
 	<target name="javadoc" depends="compile">
-		<javadoc sourcepath="${src}" packagenames="gr.spinellis.*" destdir="${uml.dir}" private="true">
+		<javadoc sourcepath="${src}" packagenames="com.developpez.*" destdir="${uml.dir}" private="true">
 			<doclet name="org.umlgraph.doclet.UmlGraph" path="${lib}/UmlGraph.jar">
 				<param name="-views" />
 				<!--
