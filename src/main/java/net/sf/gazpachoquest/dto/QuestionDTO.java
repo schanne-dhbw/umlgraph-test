@@ -15,10 +15,10 @@ import java.util.Collections;
 import java.util.List;
 
 
-/**
- * @composed - has 1..n SubquestionDTO
- */
 @SuppressWarnings("serial")
+/**
+ * @opt inferreltype composed
+ */
 public class QuestionDTO extends AbstractQuestionDTO {
 
     private final List<SubquestionDTO> subquestions = new ArrayList<>();

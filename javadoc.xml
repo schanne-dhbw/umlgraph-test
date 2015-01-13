@@ -43,8 +43,9 @@
 	<target name="javadoc" depends="compile">
 		<javadoc sourcepath="${src}" packagenames="net.sf.*" destdir="${uml.dir}" private="true">
 			<doclet name="org.umlgraph.doclet.UmlGraph" path="${lib}/UmlGraph.jar">
-				<param name="-views" />
+				
 				<!--
+				<param name="-views" />
 				<param name="-inferrel" />
 				<param name="-inferdep" />
 				<param name="-collapsible" />

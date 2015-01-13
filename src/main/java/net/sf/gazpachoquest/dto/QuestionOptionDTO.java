@@ -10,12 +10,9 @@
  ******************************************************************************/
 package net.sf.gazpachoquest.dto;
 
-import net.sf.gazpachoquest.dto.support.AbstractIdentifiableDTO;
-import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
 
 @SuppressWarnings("serial")
-public class QuestionOptionDTO extends AbstractIdentifiableDTO implements
-        IdentifiableLocalizable {
+public class QuestionOptionDTO  {
 
     private String code;
 

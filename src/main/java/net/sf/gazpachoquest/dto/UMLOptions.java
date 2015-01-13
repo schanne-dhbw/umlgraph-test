@@ -2,9 +2,8 @@ package net.sf.gazpachoquest.dto;
 
 /**
  * @opt inferrel
+ * @opt inferreltype composed
  * @opt collpackages java.util.*
- * @opt inferdep
- * @opt inferdepinpackage
  * @opt useimports
  * @opt hide java.*
  * @opt postfixpackage

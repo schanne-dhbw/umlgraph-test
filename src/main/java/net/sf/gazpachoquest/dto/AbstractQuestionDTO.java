@@ -17,18 +17,14 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlTransient;
 
 import net.sf.gazpachoquest.dto.QuestionOptionDTO;
-import net.sf.gazpachoquest.dto.support.AbstractIdentifiableDTO;
-import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
 
 
 @SuppressWarnings("serial")
 
 /**
  * @opt inferreltype composed
- * @has 1 possede * net.sf.gazpachoquest.dto.QuestionOptionDTO
  */
-public abstract class AbstractQuestionDTO extends AbstractIdentifiableDTO implements
-        IdentifiableLocalizable{
+public abstract class AbstractQuestionDTO {
 
     protected String code;
 
