@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import net.sf.gazpachoquest.dto.embeddables.SectionLanguageSettingsDTO;
 import net.sf.gazpachoquest.dto.support.AbstractAuditableDTO;
 import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
 
@@ -22,10 +21,9 @@ import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
  * @composed - has 1..n QuestionDTO
  */
 @SuppressWarnings("serial")
-public class SectionDTO extends AbstractAuditableDTO implements IdentifiableLocalizable<SectionLanguageSettingsDTO> {
+public class SectionDTO extends AbstractAuditableDTO implements IdentifiableLocalizable {
 
 
-    private SectionLanguageSettingsDTO languageSettings;
 
     private final List<QuestionDTO> questions = new ArrayList<>();
 

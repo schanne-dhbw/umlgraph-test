@@ -10,7 +10,6 @@
  ******************************************************************************/
 package net.sf.gazpachoquest.dto;
 
-import net.sf.gazpachoquest.dto.embeddables.QuestionLanguageSettingsDTO;
 
 @SuppressWarnings("serial")
 public class SubquestionDTO extends AbstractQuestionDTO {

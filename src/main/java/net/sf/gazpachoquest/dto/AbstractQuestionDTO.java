@@ -17,7 +17,6 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlTransient;
 
 import net.sf.gazpachoquest.dto.QuestionOptionDTO;
-import net.sf.gazpachoquest.dto.embeddables.QuestionLanguageSettingsDTO;
 import net.sf.gazpachoquest.dto.support.AbstractIdentifiableDTO;
 import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
 
@@ -26,11 +25,10 @@ import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
 
 /**
  * @opt inferreltype composed
- * 
- * @composed 1 has * net.sf.gazpachoquest.dto.QuestionOptionDTO
+ * @has 1 possede * net.sf.gazpachoquest.dto.QuestionOptionDTO
  */
 public abstract class AbstractQuestionDTO extends AbstractIdentifiableDTO implements
-        IdentifiableLocalizable<QuestionLanguageSettingsDTO>{
+        IdentifiableLocalizable{
 
     protected String code;
 

@@ -16,7 +16,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import net.sf.gazpachoquest.dto.embeddables.QuestionnaireDefinitionLanguageSettingsDTO;
 import net.sf.gazpachoquest.dto.support.AbstractAuditableDTO;
 import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
 
@@ -25,9 +24,8 @@ import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
  */
 @SuppressWarnings("serial")
 public class QuestionnaireDefinitionDTO extends AbstractAuditableDTO implements
-        IdentifiableLocalizable<QuestionnaireDefinitionLanguageSettingsDTO> {
+        IdentifiableLocalizable{
 
-    private QuestionnaireDefinitionLanguageSettingsDTO languageSettings;
 
     private final List<SectionDTO> sections = new ArrayList<>();
 

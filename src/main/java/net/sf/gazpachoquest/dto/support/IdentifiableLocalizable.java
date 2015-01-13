@@ -11,7 +11,7 @@
 package net.sf.gazpachoquest.dto.support;
 
 
-public interface IdentifiableLocalizable<LSD extends LanguageSettingsDTO> extends Identifiable {
+public interface IdentifiableLocalizable extends Identifiable {
 
 
 }

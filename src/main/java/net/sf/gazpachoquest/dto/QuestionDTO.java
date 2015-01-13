@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import net.sf.gazpachoquest.dto.embeddables.QuestionLanguageSettingsDTO;
 
 /**
  * @composed - has 1..n SubquestionDTO

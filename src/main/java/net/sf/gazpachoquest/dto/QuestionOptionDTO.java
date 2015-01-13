@@ -10,17 +10,15 @@
  ******************************************************************************/
 package net.sf.gazpachoquest.dto;
 
-import net.sf.gazpachoquest.dto.embeddables.QuestionOptionLanguageSettingsDTO;
 import net.sf.gazpachoquest.dto.support.AbstractIdentifiableDTO;
 import net.sf.gazpachoquest.dto.support.IdentifiableLocalizable;
 
 @SuppressWarnings("serial")
 public class QuestionOptionDTO extends AbstractIdentifiableDTO implements
-        IdentifiableLocalizable<QuestionOptionLanguageSettingsDTO> {
+        IdentifiableLocalizable {
 
     private String code;
 
-    private QuestionOptionLanguageSettingsDTO languageSettings;
 
     public QuestionOptionDTO() {
         super();

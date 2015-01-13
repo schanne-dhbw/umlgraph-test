@@ -9,54 +9,17 @@ package net.sf.gazpachoquest.dto.support;
 
 import java.time.LocalDateTime;
 
-import net.sf.gazpachoquest.dto.AuditorDTO;
 
 
 @SuppressWarnings("serial")
 public abstract class AbstractAuditableDTO extends AbstractIdentifiableDTO {
 
-    private AuditorDTO createdBy;
-
     private LocalDateTime createdDate;
-
-    private AuditorDTO lastModifiedBy;
 
     private LocalDateTime lastModifiedDate;
 
     protected AbstractAuditableDTO() {
         super();
-    }
-
-    public AuditorDTO getCreatedBy() {
-        return createdBy;
-    }
-
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
-    }
-
-    public AuditorDTO getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public LocalDateTime getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public void setCreatedBy(final AuditorDTO createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public void setCreatedDate(final LocalDateTime createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public void setLastModifiedBy(final AuditorDTO lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
-
-    public void setLastModifiedDate(final LocalDateTime lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
     }
 
 }
