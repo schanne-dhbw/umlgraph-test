@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="graph">
+  <!-- set global properties for this build -->
+  <property name="src" location="src/main/java" />
+  <property name="lib" location="doclets" />
+  <property name="javadoc" location="target/javadoc" />
+  <property name="build" location="target" />
+  <property name="dot" value="dot" />
+  <property name="image.type" value="png" />
+  <property name="uml.dir" value="${basedir}/target/uml" />
+
+  <target name="init">
+	<!-- Create the time stamp -->
+    <tstamp />
+	<!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}" />
+    <mkdir dir="${javadoc}" />
+    <mkdir dir="${uml.dir}" />
+  </target>
+
+  <target name="compile" depends="init" description="compile the source, build library ">
+    <javac srcdir="${src}" destdir="${build}" debug="true" deprecation="true" includeantruntime="false">
+      <compilerarg value="-Xlint" />
+      <classpath>
+        <pathelement location="${env.JAVA_HOME}/lib/tools.jar" />
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="javadoc" depends="compile">
+    <javadoc sourcepath="${src}" packagenames="com.developpez.*" destdir="${uml.dir}" private="true">
+      <doclet name="org.umlgraph.doclet.UmlGraphDoc" path="${lib}/UmlGraph.jar">
+        <param name="-views" />
+		<!--
+		<param name="-inferrel" />
+		<param name="-inferdep" />
+		 -->
+        <param name="-collapsible" />
+        <param name="-hide" value="java.*" />
+        <param name="-collpackages" value="java.util.*" />
+        <param name="-qualify" />
+        <param name="-postfixpackage" />
+        <param name="-nodefontsize" value="9" />
+        <param name="-nodefontpackagesize" value="7" />
+        <param name="-link" value="http://docs.oracle.com/javase/7/docs/jdk/api/javadoc/doclet/" />
+        <param name="-link" value="http://download.oracle.com/javase/7/docs/api/" />
+      </doclet>
+      <tag name="hidden" scope="all" />
+      <tag name="opt" scope="all" />
+      <tag name="has" scope="all" />
+      <tag name="composed" scope="all" />
+      <tag name="view" scope="all" />
+      <tag name="match" scope="all" />
+
+      <tag name="depend" scope="all" />
+      <tag name="assoc" scope="all" />
+    </javadoc>
+  </target>
+
+  <target name="draw-uml" depends="compile">
+    <javadoc sourcepath="${src}" packagenames="com.developpez.*" destdir="${uml.dir}" private="true">
+      <doclet name="org.umlgraph.doclet.UmlGraph" path="${lib}/UmlGraph.jar">
+        <param name="-views" />
+      </doclet>
+    </javadoc>
+  </target>
+
+  <target name="graph" depends="draw-uml">
+    <apply executable="${dot}" dest="${uml.dir}" parallel="false">
+      <arg value="-T${image.type}" />
+      <arg value="-o" />
+      <targetfile />
+      <srcfile />
+      <fileset dir="${uml.dir}" includes="*.dot" />
+      <mapper type="glob" from="*.dot" to="*.${image.type}" />
+    </apply>
+  </target>
+</project>
